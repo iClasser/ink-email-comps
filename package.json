@@ -12,9 +12,12 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "gen:ink": "pnpm dlx tsx tools/generate-ink-aggregator.ts",
+    "build:ink": "pnpm -C packages/inkdes-email-comps build",
     "clean:packages": "turbo run clean --filter './packages/*'",
     "test": "turbo run test",
     "build:packages:publish": "pnpm turbo run build --filter './packages/*' && pnpm changeset publish",
+    "publish:changsets": "pnpm changeset publish",
     "lint": "echo 'no lint configured'",
     "changeset": "changeset",
     "version": "changeset version && pnpm install --no-frozen-lockfile",

@@ -117,6 +117,25 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/inkdes-email-comps:
+    dependencies:
+      '@inkdes-email-comps/html':
+        specifier: workspace:*
+        version: link:../html
+      '@inkdes-email-comps/img':
+        specifier: workspace:*
+        version: link:../img
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/tsconfig: {}
 
 packages:

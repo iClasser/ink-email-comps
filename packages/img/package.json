@@ -1,5 +1,5 @@
 {
-  "name": "inkdes-email-comps/img",
+  "name": "@inkdes-email-comps/img",
   "version": "0.0.1",
   "description": "Display an image in your email (InkDes Mailer)",
   "sideEffects": false,

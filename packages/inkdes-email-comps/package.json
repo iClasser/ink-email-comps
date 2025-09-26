@@ -1,0 +1,65 @@
+{
+  "name": "inkdes-email-comps",
+  "version": "0.0.0",
+  "description": "All InkDes email components in one package",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./html": {
+      "import": "./dist/html.mjs",
+      "require": "./dist/html.js",
+      "types": "./dist/html.d.ts"
+    },
+    "./img": {
+      "import": "./dist/img.mjs",
+      "require": "./dist/img.js",
+      "types": "./dist/img.d.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts && tsdown src/html.ts src/img.ts --format esm,cjs --dts",
+    "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iClasser/inkdes-email-comps",
+    "directory": "packages/inkdes-email-comps"
+  },
+  "keywords": [
+    "react",
+    "email",
+    "inkdes",
+    "inkdes-email-comps"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@inkdes-email-comps/html": "workspace:*",
+    "@inkdes-email-comps/img": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
