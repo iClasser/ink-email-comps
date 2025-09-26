@@ -1,18 +1,22 @@
 # inkdes-email-comps
-InkDes email library.
+InkDes react email components library. You can create emails with these components well tested for email compatibility.
 <br />
+
+<div style="text-align:center">
+  <a href="https://inkdes.com" target="_blank">InkDes.com Website</a>
+</div>
 
 ## Installation
 
 ```bash
 # pnpm
-pnpm add inkdes-email-comps -E
+pnpm add inkdes-email-comps
 
 # npm
-npm install inkdes-email-comps -E
+npm install inkdes-email-comps
 
 # yarn
-yarn add inkdes-email-comps -E
+yarn add inkdes-email-comps
 ```
 
 ## Quick start
@@ -20,25 +24,11 @@ yarn add inkdes-email-comps -E
 ```tsx
 import { Html, Img } from "inkdes-email-comps";
 
-export default function Email() {
+export default function EmailTemplate() {
   return <Html>
-  <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
+    <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
   </Html>
 }
-```
-
-## Alignment & styling
-
-```tsx
-<Img
-  src="banner.png"
-  alt="Banner"
-  width={600}
-  center
-  direction="ltr"
-  borderRadius="8px"
-  outerSpacing="16px 0"
-/>
 ```
 
 ## License

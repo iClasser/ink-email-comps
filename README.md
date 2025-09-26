@@ -24,25 +24,11 @@ yarn add inkdes-email-comps
 ```tsx
 import { Html, Img } from "inkdes-email-comps";
 
-export default function Email() {
+export default function EmailTemplate() {
   return <Html>
-  <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
+    <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
   </Html>
 }
-```
-
-## Alignment & styling
-
-```tsx
-<Img
-  src="banner.png"
-  alt="Banner"
-  width={600}
-  center
-  direction="ltr"
-  borderRadius="8px"
-  outerSpacing="16px 0"
-/>
 ```
 
 ## License
