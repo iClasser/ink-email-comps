@@ -1,0 +1,25 @@
+{
+  "name": "@iclasser/ink-email-comps-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Turborepo for ink-mailer components and apps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iClasser/ink-email-comps"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "lint": "echo 'no lint configured'"
+  },
+  "devDependencies": {
+    "turbo": "2.5.4",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  }
+}
+
+

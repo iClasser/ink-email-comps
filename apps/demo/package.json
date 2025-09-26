@@ -1,0 +1,12 @@
+{
+  "name": "@iclasser/ink-email-comps-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'demo placeholder' && node -e \"console.log('demo running...')\"",
+    "build": "echo 'no build'",
+    "start": "pnpm dev"
+  }
+}
+
+

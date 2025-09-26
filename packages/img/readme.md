@@ -1,0 +1,51 @@
+![Ink Mailer Img cover](https://raw.githubusercontent.com/iClasser/ink-email-comps/main/assets/covers/img.png)
+
+<div align="center"><strong>@iclasser/ink-email-comps-img</strong></div>
+<div align="center">Display an image in your email.</div>
+<br />
+<div align="center">
+<a href="https://github.com/iClasser/ink-email-comps">GitHub</a>
+</div>
+
+## Install
+
+Install component from your command line.
+
+#### With pnpm
+
+```sh
+pnpm add @iclasser/ink-email-comps-img -E
+```
+
+#### With npm
+
+```sh
+npm install @iclasser/ink-email-comps-img -E
+```
+
+## Getting started
+
+Add the component to your email template. Include styles where needed.
+
+```tsx
+import { Img } from "@iclasser/ink-email-comps-img";
+
+const Email = () => {
+  return <Img src="cat.jpg" alt="Cat" width="300" height="300" />;
+};
+```
+
+## Props
+
+| Name   | Type   | Default | Description                        |
+| ------ | ------ | ------- | ---------------------------------- |
+| alt    | string |         | Alternate description for an image |
+| src    | string |         | The path to the image              |
+| width  | string |         | The width of an image in pixels    |
+| height | string |         | The height of an image in pixels   |
+
+## License
+
+MIT License
+
+
