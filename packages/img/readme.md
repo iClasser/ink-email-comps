@@ -6,13 +6,13 @@ Display an image in your email.
 
 ```bash
 # pnpm
-pnpm add inkdes-email-comps/img -E
+pnpm add inkdes-email-comps/img
 
 # npm
-npm install inkdes-email-comps/img -E
+npm install inkdes-email-comps/img
 
 # yarn
-yarn add inkdes-email-comps/img -E
+yarn add inkdes-email-comps/img
 ```
 
 ## Quick start

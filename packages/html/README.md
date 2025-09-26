@@ -1,4 +1,4 @@
-# ink-email-comps/html
+# inkdes-email-comps/html
 
 HTML root wrapper for your email documents.
 
@@ -6,13 +6,13 @@ HTML root wrapper for your email documents.
 
 ```bash
 # pnpm
-pnpm add ink-email-comps/html -E
+pnpm add ink-email-comps/html
 
 # npm
-npm install ink-email-comps/html -E
+npm install ink-email-comps/html
 
 # yarn
-yarn add ink-email-comps/html -E
+yarn add ink-email-comps/html
 ```
 
 ## Quick start
