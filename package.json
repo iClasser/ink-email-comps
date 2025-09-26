@@ -23,6 +23,18 @@
     "version": "changeset version && pnpm install --no-frozen-lockfile",
     "release": "turbo run build --filter=./packages/* && pnpm changeset publish"
   },
+  "keywords": [
+    "react",
+    "email",
+    "email-notification",
+    "react-email-component",
+    "react-email",
+    "send-email",
+    "email-component",
+    "inkdes-mailer",
+    "inkdes-email-comps",
+    "inkdes"
+  ],
   "devDependencies": {
     "@changesets/cli": "2.29.5",
     "tsdown": "^0.15.4",
