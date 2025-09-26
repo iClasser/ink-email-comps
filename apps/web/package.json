@@ -1,5 +1,5 @@
 {
-  "name": "@iclasser/ink-email-comps-web",
+  "name": "web",
   "version": "0.0.0",
   "private": true,
   "scripts": {

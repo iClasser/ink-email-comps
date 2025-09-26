@@ -1,51 +1,59 @@
-![Ink Mailer Img cover](https://raw.githubusercontent.com/iClasser/ink-email-comps/main/assets/covers/img.png)
-
-<div align="center"><strong>@iclasser/ink-email-comps-img</strong></div>
-<div align="center">Display an image in your email.</div>
+# inkdes-email-comps/img
+Display an image in your email.
 <br />
-<div align="center">
-<a href="https://github.com/iClasser/ink-email-comps">GitHub</a>
-</div>
 
-## Install
+## Installation
 
-Install component from your command line.
+```bash
+# pnpm
+pnpm add inkdes-email-comps/img -E
 
-#### With pnpm
+# npm
+npm install inkdes-email-comps/img -E
 
-```sh
-pnpm add @iclasser/ink-email-comps-img -E
+# yarn
+yarn add inkdes-email-comps/img -E
 ```
 
-#### With npm
-
-```sh
-npm install @iclasser/ink-email-comps-img -E
-```
-
-## Getting started
-
-Add the component to your email template. Include styles where needed.
+## Quick start
 
 ```tsx
-import { Img } from "@iclasser/ink-email-comps-img";
+import { Img } from "inkdes-email-comps/img";
 
-const Email = () => {
-  return <Img src="cat.jpg" alt="Cat" width="300" height="300" />;
-};
+export default function Email() {
+  return <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
+}
+```
+
+## Alignment & styling
+
+```tsx
+<Img
+  src="banner.png"
+  alt="Banner"
+  width={600}
+  center
+  direction="ltr"
+  borderRadius="8px"
+  outerSpacing="16px 0"
+/>
 ```
 
 ## Props
 
-| Name   | Type   | Default | Description                        |
-| ------ | ------ | ------- | ---------------------------------- |
-| alt    | string |         | Alternate description for an image |
-| src    | string |         | The path to the image              |
-| width  | string |         | The width of an image in pixels    |
-| height | string |         | The height of an image in pixels   |
+| Name         | Type                 | Required | Default | Description                                        |
+| ------------ | -------------------- | -------- | ------- | -------------------------------------------------- |
+| src          | string               | Yes      | ""      | Path or URL to the image                           |
+| alt          | string               | No       | ""      | Alternate description for the image                |
+| width        | number \| string     | No       | —       | Image width. Numbers are treated as px in style    |
+| height       | number \| string     | No       | —       | Image height. Numbers are treated as px in style   |
+| center       | boolean              | No       | false   | Centers the image within the table cell            |
+| direction    | "ltr" \| "rtl"       | No       | "ltr"   | Text direction for the wrapper cell                |
+| borderRadius | string               | No       | —       | Applied as CSS border-radius on the image          |
+| outerSpacing | string               | No       | —       | Padding applied to the wrapper cell (e.g. "16px 0") |
 
 ## License
 
-MIT License
+MIT © iClasser
 
 

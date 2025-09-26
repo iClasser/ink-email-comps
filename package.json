@@ -1,25 +1,30 @@
 {
-  "name": "@iclasser/ink-email-comps-monorepo",
-  "version": "0.0.0",
+  "name": "inkdes-email-comps-monorepo",
+  "version": "1.0.0",
   "private": true,
-  "description": "Turborepo for ink-mailer components and apps",
+  "description": "Turborepo for InkDes-mailer components and apps",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iClasser/ink-email-comps"
+    "url": "https://github.com/iClasser/inkdes-email-comps"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.13.1",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "clean:packages": "turbo run clean --filter './packages/*'",
     "test": "turbo run test",
-    "lint": "echo 'no lint configured'"
+    "build:packages:publish": "pnpm turbo run build --filter './packages/*' && pnpm changeset publish",
+    "lint": "echo 'no lint configured'",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install --no-frozen-lockfile",
+    "release": "turbo run build --filter=./packages/* && pnpm changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "2.29.5",
+    "tsdown": "^0.15.4",
     "turbo": "2.5.4",
     "typescript": "5.8.3",
     "vitest": "3.2.4"
   }
 }
-
-
