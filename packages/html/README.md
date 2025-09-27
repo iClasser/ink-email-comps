@@ -2,6 +2,11 @@
 
 HTML root wrapper for your email documents.
 
+<div style='text-align:center'>
+  <a href='https://github.com/iClasser/inkdes-email-comps'>GitHub<a>
+  </hr>
+</div>
+
 ## Installation
 
 ```bash

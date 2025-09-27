@@ -2,6 +2,12 @@
 Display an image in your email.
 <br />
 
+
+<div style='text-align:center'>
+  <a href='https://github.com/iClasser/inkdes-email-comps'>GitHub<a>
+  </hr>
+</div>
+
 ## Installation
 
 ```bash

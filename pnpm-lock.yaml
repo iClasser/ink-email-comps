@@ -91,6 +91,58 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/body:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
+  packages/body-content:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
+  packages/font:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
+  packages/head:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/html:
     dependencies:
       react:
@@ -119,6 +171,18 @@ importers:
 
   packages/inkdes-email-comps:
     dependencies:
+      '@inkdes-email-comps/body':
+        specifier: workspace:*
+        version: link:../body
+      '@inkdes-email-comps/body-content':
+        specifier: workspace:*
+        version: link:../body-content
+      '@inkdes-email-comps/font':
+        specifier: workspace:*
+        version: link:../font
+      '@inkdes-email-comps/head':
+        specifier: workspace:*
+        version: link:../head
       '@inkdes-email-comps/html':
         specifier: workspace:*
         version: link:../html

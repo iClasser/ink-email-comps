@@ -1,6 +1,6 @@
 {
   "name": "inkdes-email-comps",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -15,6 +15,26 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./body": {
+      "import": "./dist/body.mjs",
+      "require": "./dist/body.js",
+      "types": "./dist/body.d.ts"
+    },
+    "./body-content": {
+      "import": "./dist/body-content.mjs",
+      "require": "./dist/body-content.js",
+      "types": "./dist/body-content.d.ts"
+    },
+    "./font": {
+      "import": "./dist/font.mjs",
+      "require": "./dist/font.js",
+      "types": "./dist/font.d.ts"
+    },
+    "./head": {
+      "import": "./dist/head.mjs",
+      "require": "./dist/head.js",
+      "types": "./dist/head.d.ts"
+    },
     "./html": {
       "import": "./dist/html.mjs",
       "require": "./dist/html.js",
@@ -28,7 +48,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsdown src/index.ts --format esm,cjs --dts && tsdown src/html.ts src/img.ts --format esm,cjs --dts",
+    "build": "tsdown src/index.ts --format esm,cjs --dts && tsdown src/body.ts src/body-content.ts src/font.ts src/head.ts src/html.ts src/img.ts --format esm,cjs --dts",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
     "clean": "rm -rf dist",
     "test": "vitest run",
@@ -57,7 +77,11 @@
   },
   "dependencies": {
     "@inkdes-email-comps/html": "workspace:*",
-    "@inkdes-email-comps/img": "workspace:*"
+    "@inkdes-email-comps/img": "workspace:*",
+    "@inkdes-email-comps/body": "workspace:*",
+    "@inkdes-email-comps/body-content": "workspace:*",
+    "@inkdes-email-comps/font": "workspace:*",
+    "@inkdes-email-comps/head": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

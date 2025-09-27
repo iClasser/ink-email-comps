@@ -2,8 +2,10 @@
 InkDes react email components library. You can create emails with these components well tested for email compatibility.
 <br />
 
-<div style="text-align:center">
-  <a href="https://inkdes.com" target="_blank">InkDes.com Website</a>
+
+<div style='text-align:center'>
+  <a href='https://github.com/iClasser/inkdes-email-comps'>GitHub<a>
+  </hr>
 </div>
 
 ## Installation
