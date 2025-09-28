@@ -1,7 +1,7 @@
 {
-  "name": "inkdes-email-head",
+  "name": "inkdes-email-button",
   "version": "0.1.0",
-  "description": "A React email head component to wrap emails (InkDes Mailer)",
+  "description": "Display a button in your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -32,12 +32,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/head"
+    "directory": "packages/button"
   },
   "keywords": [
     "react",
     "email",
     "email-notification",
+    "button",
     "react-email-component",
     "react-email",
     "send-email",

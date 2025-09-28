@@ -117,6 +117,19 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/button:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/font:
     dependencies:
       react:
@@ -171,22 +184,25 @@ importers:
 
   packages/inkdes-email-comps:
     dependencies:
-      '@inkdes-email-comps/body':
+      inkdes-email-body:
         specifier: workspace:*
         version: link:../body
-      '@inkdes-email-comps/body-content':
+      inkdes-email-body-content:
         specifier: workspace:*
         version: link:../body-content
-      '@inkdes-email-comps/font':
+      inkdes-email-button:
+        specifier: workspace:*
+        version: link:../button
+      inkdes-email-font:
         specifier: workspace:*
         version: link:../font
-      '@inkdes-email-comps/head':
+      inkdes-email-head:
         specifier: workspace:*
         version: link:../head
-      '@inkdes-email-comps/html':
+      inkdes-email-html:
         specifier: workspace:*
         version: link:../html
-      '@inkdes-email-comps/img':
+      inkdes-email-img:
         specifier: workspace:*
         version: link:../img
       react:

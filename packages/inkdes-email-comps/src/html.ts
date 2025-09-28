@@ -1,1 +1,1 @@
-export * from "@inkdes-email-comps/html";
+export * from "inkdes-email-html";

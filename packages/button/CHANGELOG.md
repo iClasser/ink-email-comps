@@ -1,4 +1,4 @@
-# inkdes-email-comps/head
+# inkdes-email-comps/button
 
 ## 0.1.0
 

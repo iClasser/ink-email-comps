@@ -1,1 +1,1 @@
-export * from "@inkdes-email-comps/font";
+export * from "inkdes-email-font";

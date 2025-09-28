@@ -30,6 +30,12 @@ function writeFile(p: string, content: string) {
   fs.writeFileSync(p, content);
 }
 
+function camelize(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
+
 function main() {
   // 1) discover packages
   const entries = fs.readdirSync(PKGS_DIR, { withFileTypes: true });
@@ -64,8 +70,11 @@ function main() {
     const name: string = pkg.name; // e.g., @inkdes-email-comps/html
     const alias = shortAlias(name); // e.g., html
 
+    // convert xyz-xyz to xyzXyz
+    const camelCaseAlias = camelize(alias);
+
     // index.ts: export * as html from '@inkdes-email-comps/html'
-    nsLines.push(`export * as ${alias} from "${name}";`);
+    nsLines.push(`export * as ${camelCaseAlias} from "${name}";`);
 
     // subpath forwarding file: src/html.ts
     const fwd = `export * from "${name}";\n`;
