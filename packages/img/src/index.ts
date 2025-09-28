@@ -1,3 +1,0 @@
-export { Img } from "./img";
-
-

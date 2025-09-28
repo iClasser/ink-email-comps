@@ -1,6 +1,6 @@
 {
   "name": "inkdes-email-comps",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -11,51 +11,21 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./body": {
-      "import": "./dist/body.mjs",
-      "require": "./dist/body.js",
-      "types": "./dist/body.d.ts"
-    },
-    "./body-content": {
-      "import": "./dist/body-content.mjs",
-      "require": "./dist/body-content.js",
-      "types": "./dist/body-content.d.ts"
-    },
-    "./button": {
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js",
-      "types": "./dist/button.d.ts"
-    },
-    "./font": {
-      "import": "./dist/font.mjs",
-      "require": "./dist/font.js",
-      "types": "./dist/font.d.ts"
-    },
-    "./head": {
-      "import": "./dist/head.mjs",
-      "require": "./dist/head.js",
-      "types": "./dist/head.d.ts"
-    },
-    "./html": {
-      "import": "./dist/html.mjs",
-      "require": "./dist/html.js",
-      "types": "./dist/html.d.ts"
-    },
-    "./img": {
-      "import": "./dist/img.mjs",
-      "require": "./dist/img.js",
-      "types": "./dist/img.d.ts"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
     }
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsdown src/index.ts --format esm,cjs --dts && tsdown src/body.ts src/body-content.ts src/button.ts src/font.ts src/head.ts src/html.ts src/img.ts --format esm,cjs --dts",
+    "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -81,13 +51,7 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "inkdes-email-html": "workspace:*",
-    "inkdes-email-img": "workspace:*",
-    "inkdes-email-body": "workspace:*",
-    "inkdes-email-body-content": "workspace:*",
-    "inkdes-email-font": "workspace:*",
-    "inkdes-email-head": "workspace:*",
-    "inkdes-email-button": "workspace:*"
+    "inkdes-email-comps/html": "workspace:0.0.1"
   },
   "publishConfig": {
     "access": "public"

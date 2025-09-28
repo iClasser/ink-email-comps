@@ -91,85 +91,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/body:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
-  packages/body-content:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
-  packages/button:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
-  packages/font:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
-  packages/head:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
   packages/html:
-    dependencies:
-      react:
-        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
-        version: 19.1.1
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
-  packages/img:
     dependencies:
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc
@@ -184,27 +106,9 @@ importers:
 
   packages/inkdes-email-comps:
     dependencies:
-      inkdes-email-body:
-        specifier: workspace:*
-        version: link:../body
-      inkdes-email-body-content:
-        specifier: workspace:*
-        version: link:../body-content
-      inkdes-email-button:
-        specifier: workspace:*
-        version: link:../button
-      inkdes-email-font:
-        specifier: workspace:*
-        version: link:../font
-      inkdes-email-head:
-        specifier: workspace:*
-        version: link:../head
-      inkdes-email-html:
-        specifier: workspace:*
+      inkdes-email-comps/html:
+        specifier: workspace:0.0.1
         version: link:../html
-      inkdes-email-img:
-        specifier: workspace:*
-        version: link:../img
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc
         version: 19.1.1

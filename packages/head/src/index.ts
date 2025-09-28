@@ -1,3 +1,0 @@
-export { Head } from "./head";
-
-

@@ -1,6 +1,6 @@
 {
-  "name": "inkdes-email-html",
-  "version": "0.1.0",
+  "name": "inkdes-email-comps/html",
+  "version": "0.0.1",
   "description": "A React email html component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -25,7 +25,7 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -60,3 +60,5 @@
     "access": "public"
   }
 }
+
+
