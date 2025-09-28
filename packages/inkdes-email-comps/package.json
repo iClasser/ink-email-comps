@@ -51,7 +51,7 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "inkdes-email-comps/html": "workspace:0.0.1"
+    "@inkdes-email-comps/html": "workspace:*"
   },
   "publishConfig": {
     "access": "public"
