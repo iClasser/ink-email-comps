@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export interface HtmlProps extends React.ComponentPropsWithoutRef<"html"> {
-  children: React.ReactNode;
+  children: any;
   dir?: string;
   lang?: string;
 }

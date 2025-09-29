@@ -13,17 +13,17 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "gen:ink": "pnpm dlx tsx tools/generate-ink-aggregator.ts",
-    "build:ink": "pnpm -C packages/inkdes-email-comps build",
+    "build:ink": "pnpm -C rootPackage/inkdes-email-comps build",
     "clean": "pnpm run clean:packages",
-    "clean:packages": "pnpm -r --filter './packages/*' run clean",
+    "clean:packages": "pnpm -r --filter './packages/*' --filter './rootPackage/*' run clean",
     "test": "turbo run test",
     "changeset": "changeset",
-    "changeset:build": "pnpm turbo run build --filter './packages/*'",
+    "changeset:build": "pnpm turbo run build --filter './packages/*' --filter './rootPackage/*'",
     "changeset:publish": "pnpm changeset publish",
-    "build:packages:publish": "pnpm turbo run build --filter './packages/*' && pnpm changeset publish",
+    "build:packages:publish": "pnpm turbo run build --filter './packages/*' --filter './rootPackage/*' && pnpm changeset publish",
     "lint": "echo 'no lint configured'",
     "version": "changeset version && pnpm install --no-frozen-lockfile",
-    "release": "turbo run build --filter=./packages/* && pnpm changeset publish"
+    "release": "turbo run build --filter=./packages/* --filter './rootPackage/*' && pnpm changeset publish"
   },
   "keywords": [
     "react",

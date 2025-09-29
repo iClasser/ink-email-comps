@@ -1,2 +1,0 @@
-pnpm config set --location project publish-branch canary
-pnpm config set --location project git-checks false

@@ -1,6 +1,6 @@
 {
-  "name": "inkdes-email-comps",
-  "version": "0.0.4",
+  "name": "@inkdes-email/comps",
+  "version": "0.1.0",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -32,7 +32,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/inkdes-email-comps"
+    "directory": "rootPackage/inkdes-email-comps"
   },
   "keywords": [
     "react",
@@ -51,7 +51,7 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "@inkdes-email-comps/html": "workspace:*"
+    "@inkdes-email/html": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

@@ -1,10 +1,10 @@
-# inkdes-email-comps/html
+# @inkdes-email/html
 
 ## 0.1.0
 
 ### Minor Changes
 
-- All components
+- Publishing react email components
 
 ## 0.0.1
 

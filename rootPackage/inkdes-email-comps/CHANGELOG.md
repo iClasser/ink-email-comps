@@ -1,5 +1,16 @@
 # inkdes-email-comps
 
+## 0.1.0
+
+### Minor Changes
+
+- Publishing react email components
+
+### Patch Changes
+
+- Updated dependencies
+  - @inkdes-email/html@0.1.0
+
 ## 1.0.0
 
 ### Major Changes
