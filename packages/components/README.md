@@ -1,4 +1,4 @@
-# @inkdes-email/comps
+# @inkdes-email/components
 InkDes react email components library. You can create emails with these components well tested for email compatibility.
 <br />
 
@@ -12,19 +12,19 @@ InkDes react email components library. You can create emails with these componen
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/comps
+pnpm add @inkdes-email/components
 
 # npm
-npm install @inkdes-email/comps
+npm install @inkdes-email/components
 
 # yarn
-yarn add @inkdes-email/comps
+yarn add @inkdes-email/components
 ```
 
 ## Quick start
 
 ```tsx
-import { Html, Img } from "@inkdes-email/comps";
+import { Html, Img } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
@@ -32,6 +32,11 @@ export default function EmailTemplate() {
   </Html>
 }
 ```
+
+
+## Support
+
+This component was tested using the most popular email clients.
 
 ## License
 

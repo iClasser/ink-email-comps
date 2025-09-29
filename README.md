@@ -33,6 +33,11 @@ export default function EmailTemplate() {
 }
 ```
 
+
+## Support
+
+This component was tested using the most popular email clients.
+
 ## License
 
 MIT © iClasser

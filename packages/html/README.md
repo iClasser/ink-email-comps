@@ -1,4 +1,4 @@
-# inkdes-email-comps/html
+# @inkdes-email/html
 
 HTML root wrapper for your email documents.
 
@@ -11,19 +11,19 @@ HTML root wrapper for your email documents.
 
 ```bash
 # pnpm
-pnpm add ink-email-comps/html
+pnpm add @inkdes-email/html
 
 # npm
-npm install ink-email-comps/html
+npm install @inkdes-email/html
 
 # yarn
-yarn add ink-email-comps/html
+yarn add @inkdes-email/html
 ```
 
 ## Quick start
 
 ```tsx
-import { Html } from "ink-email-comps/html";
+import { Html } from "@inkdes-email/html";
 
 export default function Email() {
   return <Html>Hello</Html>;
@@ -34,7 +34,7 @@ export default function Email() {
 
 | Name     | Type                   | Required | Default | Description                         |
 | -------- | ---------------------- | -------- | ------- | ----------------------------------- |
-| children | React.ReactNode        | Yes      | —       | Content of the email document       |
+| children | any        | Yes      | —       | Content of the email document       |
 | dir      | "ltr" \| "rtl"          | No       | "ltr"   | Text direction for the document     |
 | lang     | string                 | No       | "en"    | Language of the document            |
 
