@@ -136,7 +136,7 @@ importers:
   packages/components:
     dependencies:
       '@inkdes-email/body':
-        specifier: workspace:0.2.1
+        specifier: workspace:0.2.2
         version: link:../body
       '@inkdes-email/body-content':
         specifier: workspace:0.2.1

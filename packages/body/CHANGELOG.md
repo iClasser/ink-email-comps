@@ -1,5 +1,11 @@
 # @inkdes-email/body
 
+## 0.2.2
+
+### Patch Changes
+
+- 2fd9bc2: Ensure build artifacts are included via prepack.
+
 ## 0.2.1
 
 ### Patch Changes

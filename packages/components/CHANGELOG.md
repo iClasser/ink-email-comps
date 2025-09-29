@@ -1,5 +1,17 @@
 # @inkdes-email/components
 
+## 0.3.0
+
+### Minor Changes
+
+- 2fd9bc2: fixed body
+
+### Patch Changes
+
+- 2fd9bc2: Ensure build artifacts are included via prepack.
+- Updated dependencies [2fd9bc2]
+  - @inkdes-email/body@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
