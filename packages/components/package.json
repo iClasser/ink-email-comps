@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -27,7 +27,8 @@
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepack": "pnpm run build"
   },
   "repository": {
     "type": "git",
@@ -58,13 +59,13 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "@inkdes-email/body": "workspace:*",
-    "@inkdes-email/head": "workspace:*",
-    "@inkdes-email/html": "workspace:*",
-    "@inkdes-email/body-content": "workspace:*",
-    "@inkdes-email/font": "workspace:*",
-    "@inkdes-email/button": "workspace:*",
-    "@inkdes-email/img": "workspace:*"
+    "@inkdes-email/body": "workspace:0.2.1",
+    "@inkdes-email/body-content": "workspace:0.2.1",
+    "@inkdes-email/button": "workspace:0.2.0",
+    "@inkdes-email/head": "workspace:0.2.0",
+    "@inkdes-email/html": "workspace:0.2.0",
+    "@inkdes-email/font": "workspace:0.2.0",
+    "@inkdes-email/img": "workspace:0.2.0"
   },
   "publishConfig": {
     "access": "public"

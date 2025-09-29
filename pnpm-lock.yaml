@@ -136,25 +136,25 @@ importers:
   packages/components:
     dependencies:
       '@inkdes-email/body':
-        specifier: workspace:*
+        specifier: workspace:0.2.1
         version: link:../body
       '@inkdes-email/body-content':
-        specifier: workspace:*
+        specifier: workspace:0.2.1
         version: link:../body-content
       '@inkdes-email/button':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../button
       '@inkdes-email/font':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../font
       '@inkdes-email/head':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../head
       '@inkdes-email/html':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../html
       '@inkdes-email/img':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../img
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc
