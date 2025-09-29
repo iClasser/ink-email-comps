@@ -11,12 +11,12 @@ export interface ButtonProps {
   text: string;
   href: string;
   icon?: IconProps;
-  backgroundColor: string;
-  align: "left" | "center" | "right";
-  direction: "ltr" | "rtl";
-  textColor: string;
-  borderRadius: string;
-  outerSpacing: string;
+  backgroundColor?: string;
+  align?: "left" | "center" | "right";
+  direction?: "ltr" | "rtl";
+  textColor?: string;
+  borderRadius?: string;
+  outerSpacing?: string;
   style?: React.CSSProperties;
 }
 
@@ -24,12 +24,12 @@ export const Button = ({
   text,
   href,
   icon,
-  backgroundColor,
-  align,
-  direction,
-  textColor,
-  borderRadius,
-  outerSpacing,
+  backgroundColor = "#000",
+  align = "center",
+  direction = "ltr",
+  textColor = "#fff",
+  borderRadius = "12px",
+  outerSpacing = "0",
   style = {
     fontSize: 16,
     fontWeight: 600,

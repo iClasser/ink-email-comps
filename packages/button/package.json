@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/button",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Display a button in your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -34,7 +34,7 @@
     "url": "https://github.com/iClasser/inkdes-email-comps",
     "directory": "packages/button"
   },
- "keywords": [
+  "keywords": [
     "react",
     "email",
     "email-notification",
@@ -61,5 +61,3 @@
     "access": "public"
   }
 }
-
-

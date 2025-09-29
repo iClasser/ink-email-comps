@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/img",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Display an image in your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -34,7 +34,7 @@
     "url": "https://github.com/iClasser/inkdes-email-comps",
     "directory": "packages/img"
   },
- "keywords": [
+  "keywords": [
     "react",
     "email",
     "email-notification",
@@ -60,5 +60,3 @@
     "access": "public"
   }
 }
-
-

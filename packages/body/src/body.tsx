@@ -5,13 +5,13 @@ export interface BodyProps extends React.ComponentPropsWithoutRef<"body"> {
   children: React.ReactNode;
   // preheader or preview text
   previewText?: string;
-  background: string;
-  backgroundColor: string;
+  background?: string;
+  backgroundColor?: string;
   // width of the body
-  width: number | "100%";
-  padding: string;
-  outerBgColor: string;
-  textColor: string;
+  width?: number | "100%";
+  padding?: string;
+  outerBgColor?: string;
+  textColor?: string;
 }
 
 export const Body: React.FC<BodyProps> = ({

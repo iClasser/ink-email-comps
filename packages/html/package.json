@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/html",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A React email html component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
