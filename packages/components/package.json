@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -51,7 +51,7 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "@inkdes-email/html": "^0.1.1"
+    "@inkdes-email/html": "workspace:*"
   },
   "publishConfig": {
     "access": "public"
