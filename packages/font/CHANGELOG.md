@@ -1,5 +1,11 @@
 # @inkdes-email/font
 
+## 0.2.0
+
+### Minor Changes
+
+- fec2272: Fixed un-necessary required props
+
 ## 0.1.0
 
 ### Minor Changes

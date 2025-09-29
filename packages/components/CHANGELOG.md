@@ -1,5 +1,23 @@
 # @inkdes-email/components
 
+## 0.2.0
+
+### Minor Changes
+
+- fec2272: Fixed un-necessary required props
+
+### Patch Changes
+
+- Updated dependencies [d3fd9f5]
+- Updated dependencies [fec2272]
+  - @inkdes-email/html@0.2.0
+  - @inkdes-email/body-content@0.2.0
+  - @inkdes-email/button@0.2.0
+  - @inkdes-email/body@0.2.0
+  - @inkdes-email/font@0.2.0
+  - @inkdes-email/head@0.2.0
+  - @inkdes-email/img@0.2.0
+
 ## 0.1.0
 
 ### Minor Changes
