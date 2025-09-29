@@ -1,7 +1,7 @@
 {
-  "name": "@inkdes-email/components",
+  "name": "@inkdes-email/button",
   "version": "0.0.1",
-  "description": "All InkDes email components in one package",
+  "description": "Display a button in your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
-    "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
+    "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -32,20 +32,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/components"
+    "directory": "packages/button"
   },
-  "keywords": [
+ "keywords": [
     "react",
     "email",
-    "inkdes",
-    "email-components",
     "email-notification",
-    "react-email-components",
+    "button",
+    "react-email-component",
     "react-email",
     "send-email",
     "email-component",
     "inkdes-mailer",
-    "inkdes-email-comps"
+    "inkdes-email-comps",
+    "inkdes"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -54,19 +54,12 @@
     "react": "^18.0 || ^19.0 || ^19.0.0-rc"
   },
   "devDependencies": {
-    "typescript": "5.8.3",
-    "tsconfig": "workspace:*"
-  },
-  "dependencies": {
-    "@inkdes-email/body": "workspace:*",
-    "@inkdes-email/head": "workspace:*",
-    "@inkdes-email/html": "workspace:*",
-    "@inkdes-email/body-content": "workspace:*",
-    "@inkdes-email/font": "workspace:*",
-    "@inkdes-email/button": "workspace:*",
-    "@inkdes-email/img": "workspace:*"
+    "tsconfig": "workspace:*",
+    "typescript": "5.8.3"
   },
   "publishConfig": {
     "access": "public"
   }
 }
+
+
