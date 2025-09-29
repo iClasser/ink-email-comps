@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",

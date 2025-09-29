@@ -18,7 +18,7 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
   backgroundColor = "",
 }) => {
   const innerPaddingAndStyle =
-    padding !== undefined ? {} : { style: { padding, ...style } };
+    padding === undefined ? {} : { style: { padding, ...style } };
   return (
     <table
       width="100%"
@@ -31,7 +31,7 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
       <tr align="center">
         {width === "100%" ? (
           <td
-            style={innerPaddingAndStyle}
+            {...innerPaddingAndStyle}
             bgColor={backgroundColor}
             width={width}
           >

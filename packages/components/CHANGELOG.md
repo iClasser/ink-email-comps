@@ -1,5 +1,14 @@
 # @inkdes-email/components
 
+## 0.2.1
+
+### Patch Changes
+
+- f351f65: Update body-content implementation and aggregate in components.
+- Updated dependencies [f351f65]
+  - @inkdes-email/body-content@0.2.1
+  - @inkdes-email/body@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
