@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/font",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A React email font component to to style your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",

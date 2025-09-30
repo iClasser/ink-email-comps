@@ -9,6 +9,9 @@ interface BodyContentsProps extends React.ComponentPropsWithoutRef<"table"> {
   backgroundColor?: string;
 }
 
+export enum BodyContentsClassNamesEnum {
+  table = 'inkdes-body-contents-table',
+}
 export const BodyContents: React.FC<BodyContentsProps> = ({
   children,
   style = {},
@@ -21,6 +24,7 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
     padding === undefined ? {} : { style: { padding, ...style } };
   return (
     <table
+      className={BodyContentsClassNamesEnum.table}
       width="100%"
       border="0"
       cellPadding="0"

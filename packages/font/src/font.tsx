@@ -61,18 +61,18 @@ export const Font: React.FC<Readonly<FontProps>> = ({
     }
 
     ${targetClasses.map(cls => `
-      .${cls} {
-        font-family: "${family}";
-      }
-    `)}
+    .${cls} {
+      font-family: "${family}";
+    }
+    `).join('')}
 
     ${targetTags.map(tag => 
       `
-        ${tag} {
-          font-family: "${family}";
-        }
+      ${tag} {
+        font-family: "${family}";
+      }
       `
-    )}
+    ).join('')}
   `;
   return <style dangerouslySetInnerHTML={{ __html: cssStyle }} />;
 };

@@ -11,6 +11,10 @@ export interface ImgProps extends React.ComponentPropsWithoutRef<"img"> {
   outerSpacing?: string;
 }
 
+export enum ImgClassNamesEnum {
+  img = 'inkdes-img',
+}
+
 export const Img: React.FC<ImgProps> = ({
   width,
   height,
@@ -47,7 +51,7 @@ export const Img: React.FC<ImgProps> = ({
   }
 
   return (
-    <table width="100" border="0" cellPadding="0" cellSpacing="0">
+    <table width="100%" border="0" cellPadding="0" cellSpacing="0">
       <tr>
         <td
           align={center ? "center" : "left"}
@@ -59,6 +63,7 @@ export const Img: React.FC<ImgProps> = ({
           }}
         >
           <img
+            className={ImgClassNamesEnum.img}
             src={src}
             alt={alt}
             {...imgProps}

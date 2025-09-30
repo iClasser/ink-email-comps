@@ -20,6 +20,11 @@ export interface ButtonProps {
   style?: React.CSSProperties;
 }
 
+export enum ButtonClassNamesEnum {
+  text = 'inkdes-button-text',
+  anchor = 'inkdes-button-anchor',
+}
+
 export const Button = ({
   text,
   href,
@@ -33,7 +38,7 @@ export const Button = ({
   style = {
     fontSize: 16,
     fontWeight: 600,
-    padding: "14px 24px",
+    padding: "12px 20px",
   },
   ...props
 }: ButtonProps & { [key: string]: any }) => {
@@ -49,14 +54,16 @@ export const Button = ({
   };
 
   const renderContent = () => {
+    const styleWithoutPadding = { ...style, padding: undefined };
     const textNode = (
       <span
+        className={ButtonClassNamesEnum.text}
         style={{
           color: textColor,
           verticalAlign: "middle",
           textDecoration: "none",
           display: "inline-block",
-          ...style,
+          ...styleWithoutPadding,
         }}
       >
         {text}
@@ -144,16 +151,14 @@ export const Button = ({
     >
       <tr>
         <td
-          align={align}
+          align={align === "center" ? "center" : undefined}
           dir={direction}
           style={{
-            textAlign: align,
             direction: direction,
             padding: cellOuterPadding,
           }}
         >
           <span dangerouslySetInnerHTML={{ __html: vml }} />
-
           <table border="0" cellPadding="0" cellSpacing="0" role="presentation">
             <tr>
               <td
@@ -166,6 +171,7 @@ export const Button = ({
                 <span dangerouslySetInnerHTML={{ __html: nonMsoStart }} />
                 <a
                   href={href}
+                  className={ButtonClassNamesEnum.anchor}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={text}
@@ -179,7 +185,7 @@ export const Button = ({
                         ? style.border
                         : `1px solid ${backgroundColor}`,
                     padding:
-                      style.padding !== undefined ? style.padding : "14px 24px",
+                      style.padding !== undefined ? style.padding : "",
                     textDecoration: "none",
                     textAlign: "center",
                     ...style,
