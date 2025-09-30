@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/body",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A React email head component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -58,7 +58,7 @@
     "typescript": "5.8.3"
   },
   "dependencies": {
-    "@inkdes-email/body-content": "workspace:*"
+    "@inkdes-email/body-contents": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

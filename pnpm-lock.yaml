@@ -93,9 +93,9 @@ importers:
 
   packages/body:
     dependencies:
-      '@inkdes-email/body-content':
+      '@inkdes-email/body-contents':
         specifier: workspace:*
-        version: link:../body-content
+        version: link:../body-contents
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc
         version: 19.1.1
@@ -107,7 +107,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/body-content:
+  packages/body-contents:
     dependencies:
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc
@@ -138,9 +138,9 @@ importers:
       '@inkdes-email/body':
         specifier: workspace:0.2.2
         version: link:../body
-      '@inkdes-email/body-content':
+      '@inkdes-email/body-contents':
         specifier: workspace:0.2.1
-        version: link:../body-content
+        version: link:../body-contents
       '@inkdes-email/button':
         specifier: workspace:0.2.1
         version: link:../button

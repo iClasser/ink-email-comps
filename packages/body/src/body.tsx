@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BodyContents } from "@inkdes-email/body-content";
+import { BodyContents } from "@inkdes-email/body-contents";
 
 export interface BodyProps extends React.ComponentPropsWithoutRef<"body"> {
   children: React.ReactNode;

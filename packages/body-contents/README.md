@@ -1,4 +1,4 @@
-# @inkdes-email/body-content
+# @inkdes-email/body-contents
 
 Wrapper for your email layout.
 
@@ -11,19 +11,19 @@ Wrapper for your email layout.
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/body-content
+pnpm add @inkdes-email/body-contents
 
 # npm
-npm install @inkdes-email/body-content
+npm install @inkdes-email/body-contents
 
 # yarn
-yarn add @inkdes-email/body-content
+yarn add @inkdes-email/body-contents
 ```
 
 ## Quick start
 
 ```tsx
-import { BodyContent } from "@inkdes-email/body-content";
+import { BodyContent } from "@inkdes-email/body-contents";
 
 export default function EmailTemplate() {
   return <>
