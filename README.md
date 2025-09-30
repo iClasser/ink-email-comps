@@ -1,4 +1,4 @@
-# @inkdes-email/comps
+# @inkdes-email/components
 InkDes react email components library. You can create emails with these components well tested for email compatibility.
 <br />
 
@@ -12,27 +12,54 @@ InkDes react email components library. You can create emails with these componen
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/comps
+pnpm add @inkdes-email/components
 
 # npm
-npm install @inkdes-email/comps
+npm install @inkdes-email/components
 
 # yarn
-yarn add @inkdes-email/comps
+yarn add @inkdes-email/components
 ```
 
 ## Quick start
 
 ```tsx
-import { Html, Img } from "@inkdes-email/comps";
+import { Html, Head, Font, Body, Img, Text, Button } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
-    <Img src="cat.jpg" alt="Cat" width={300} height={300} />;
-  </Html>
+  <Head>
+    <Font 
+      family='Trirong'
+      url='https://fonts.gstatic.com/s/trirong/v17/7r3GqXNgp8wxdOdOn58o2IRj6unHgw.woff2'
+      format='woff2'
+      fallback='Arial'
+      style='normal'
+      weight='400'
+      targetClasses={[]}
+      targetTags={['html', 'body', 'button']}
+    />
+    <title>Platform name</title>
+  </Head>
+  <Body previewText='Some preview pre-header text.' width={376} padding='20px 20px' outerBgColor='#fff' backgroundColor='#dedede'>
+    <Img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png" alt="Cat" width={48} height={48} borderRadius='100%' />;
+    <Text fontSize='14px' fontWeight='400' fontColor='#000'>Hello world!</Text>
+    <Button align='center' href='#' text='Confirm' backgroundColor='#000' textColor='#fff' />
+  </Body>
+</Html>
 }
 ```
 
+
+## Components
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/html'>Html</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/head'>Head</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/font'>Font</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body'>Body</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body-contents'>BodyContents</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/button'>Button</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/img'>Img</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
 
 ## Support
 

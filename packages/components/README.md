@@ -50,6 +50,16 @@ export default function EmailTemplate() {
 }
 ```
 
+## Components
+
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/html'>Html</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/head'>Head</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/font'>Font</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body'>Body</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body-contents'>BodyContents</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/button'>Button</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/img'>Img</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
 
 ## Support
 
