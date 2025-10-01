@@ -7,7 +7,7 @@ export interface TextProps extends React.ComponentPropsWithoutRef<"body"> {
   fontWeight?: string;
   fontFamily?: string;
   fontSize?: string;
-  fontColor?: string;
+  textColor?: string;
   className?: string;
 }
 
@@ -23,7 +23,7 @@ export const Text: React.FC<TextProps> = ({
   fontWeight,
   fontFamily,
   fontSize,
-  fontColor = '#000',
+  textColor = '#000',
   className = '',
   ...props
 }) => {
@@ -33,10 +33,16 @@ export const Text: React.FC<TextProps> = ({
     styles,
     fontWeight && {
       fontWeight,
-      ...(fontFamily && { fontFamily }),
-      ...(fontSize && { fontSize }),
-      ...(fontColor && { color: fontColor }),
-    }
+    },
+    fontFamily && {
+      fontFamily,
+    },
+    fontSize && {
+      fontSize,
+    },
+    textColor && {
+      color: textColor,
+    },
   );
   if (props.style) {
     Object.assign(styles, props.style);

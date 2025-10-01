@@ -37,7 +37,7 @@ export default function EmailTemplate() {
 | Name     | Type            | Required | Default | Description |
 | -------- | --------------- | -------- | ------- | ----------- |
 | children | React.ReactNode | Yes      | —       | Content of the email document |
-| fontColor | string | No      | —       |  |
+| textColor | string | No      | —       | `#000` |
 | fontSize | string | No      | —       |  |
 | fontWeight | string | No      | —       |  |
 | className | string | No      | —       |  |
