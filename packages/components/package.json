@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -59,15 +59,15 @@
     "tsconfig": "workspace:*"
   },
   "dependencies": {
-    "@inkdes-email/body": "workspace:0.2.2",
-    "@inkdes-email/body-contents": "workspace:0.2.1",
-    "@inkdes-email/button": "workspace:0.2.1",
-    "@inkdes-email/head": "workspace:0.2.0",
-    "@inkdes-email/html": "workspace:0.2.0",
-    "@inkdes-email/font": "workspace:0.2.1",
-    "@inkdes-email/img": "workspace:0.2.1",
-    "@inkdes-email/text": "workspace:0.1.0",
-    "@inkdes-email/card": "workspace:0.1.0"
+    "@inkdes-email/body": "workspace:^0.2.3",
+    "@inkdes-email/body-contents": "workspace:^0.2.2",
+    "@inkdes-email/button": "workspace:^0.2.1",
+    "@inkdes-email/card": "workspace:^0.1.0",
+    "@inkdes-email/font": "workspace:^0.2.1",
+    "@inkdes-email/head": "workspace:^0.2.0",
+    "@inkdes-email/html": "workspace:^0.2.0",
+    "@inkdes-email/img": "workspace:^0.2.1",
+    "@inkdes-email/text": "workspace:^0.1.0"
   },
   "publishConfig": {
     "access": "public"
