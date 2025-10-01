@@ -55,7 +55,7 @@ export default function EmailTemplate() {
   </Head>
   <Body previewText='Some preview pre-header text.' width={376} padding='20px 20px' outerBgColor='#fff' backgroundColor='#dedede'>
     <Img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png" alt="Cat" width={48} height={48} borderRadius='100%' />;
-    <Text fontSize='14px' fontWeight='400' fontColor='#000'>Hello world!</Text>
+    <Text fontSize='14px' fontWeight='400' textColor='#000'>Hello world!</Text>
     <Card 
         header={<Text>Some header</Text>}
         content={<Text>Some content</Text>}
