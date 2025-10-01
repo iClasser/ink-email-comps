@@ -41,34 +41,63 @@ import { Html, Head, Font, Body, Img, Text, Card, Button } from "@inkdes-email/c
 export default function EmailTemplate() {
   return <Html>
   <Head>
-    <Font 
-      family='Trirong'
-      url='https://fonts.gstatic.com/s/trirong/v17/7r3GqXNgp8wxdOdOn58o2IRj6unHgw.woff2'
-      format='woff2'
-      fallback='Arial'
-      style='normal'
-      weight='400'
+    <Font
+      family="Inter"
+      url="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZJhiJ-Ek-_EeAmM.woff2"
+      format="woff2"
+      fallback="Arial"
+      style="normal"
+      weight="400"
       targetClasses={[]}
       targetTags={['html', 'body', 'button']}
     />
     <title>Platform name</title>
   </Head>
-  <Body previewText='Some preview pre-header text.' width={376} padding='20px 20px' outerBgColor='#fff' backgroundColor='#dedede'>
-    <Img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png" alt="Cat" width={48} height={48} borderRadius='100%' />;
-    <Text fontSize='14px' fontWeight='400' textColor='#000'>Hello world!</Text>
-    <Card 
-        header={<Text>Some header</Text>}
-        content={<Text>Some content</Text>}
-        footer={<Text>Some footer</Text>}
-        headerBackgroundColor='#fff'
-        contentBackgroundColor='#fff'
-        footerBackgroundColor='#fff'
-        borderRadius='24px' 
-        padding='12px 15px'
-        width='100%'
-        outerSpacing='0px 20px' 
-     />
-    <Button align='center' href='#' text='Confirm' backgroundColor='#000' textColor='#fff' />
+  <Body
+    previewText="Some preview pre-header text."
+    width={376}
+    padding="20px 20px"
+    outerBgColor="#fff"
+    backgroundColor="#f2f6f7"
+  >
+    <Img
+      src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60"
+      alt="Cat"
+      width={48}
+      height={48}
+    />
+    <Text fontSize="14px" fontWeight="400" fontColor="#000">
+      Hello from InkDes!
+    </Text>
+
+    <Card
+      header={
+        <Fragment>
+          <Img
+            src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png"
+            alt="Cat"
+            width={48}
+            height={48}
+            borderRadius="100%"
+          />
+          <Text textColor="white" fontSize="20px">
+            InkDes
+          </Text>
+        </Fragment>
+      }
+      headerBackgroundColor="#000"
+      content={<Text>Welcome to InkDes!</Text>}
+      borderRadius="24px"
+      padding="12px 15px"
+      width="100%"
+    />
+    <Button
+      align="center"
+      href="https://inkdes.com"
+      text="Confirm"
+      backgroundColor="#000"
+      textColor="#fff"
+    />
   </Body>
 </Html>
 }
