@@ -20,7 +20,7 @@ export enum CardClassNamesEnum {
   footer = "inkdes-card-footer",
 }
 
-function breakDownValues(value: string) {
+function breakDownBorderRadiusValues(value: string) {
   const returnValues = {
     topLeft: "",
     topRight: "",
@@ -57,11 +57,50 @@ function breakDownValues(value: string) {
   }
   return returnValues;
 }
+
+const breakDownPaddingValues = (value: string) => {
+  const returnValues = {
+    top: "",
+    right: "",
+    bottom: "",
+    left: "",
+  };
+  if (!value) {
+    return returnValues;
+  }
+  let splitValue = value.split(" ");
+  if (splitValue.length === 1) {
+    returnValues.top = splitValue[0];
+    returnValues.right = splitValue[0];
+    returnValues.bottom = splitValue[0];
+    returnValues.left = splitValue[0];
+  }
+  if (splitValue.length === 2) {
+    returnValues.top = splitValue[0];
+    returnValues.right = splitValue[1];
+    returnValues.bottom = splitValue[0];
+    returnValues.left = splitValue[1];
+  }
+  if (splitValue.length === 3) {
+    returnValues.top = splitValue[0];
+    returnValues.right = splitValue[1];
+    returnValues.bottom = splitValue[2];
+    returnValues.left = splitValue[0];
+  }
+  if (splitValue.length === 4) {
+    returnValues.top = splitValue[0];
+    returnValues.right = splitValue[1];
+    returnValues.bottom = splitValue[2];
+    returnValues.left = splitValue[3];
+  }
+  return returnValues;
+}
+
 export const Card: React.FC<CardProps> = ({
   padding = "12px 15px",
   width = "100%",
   borderRadius = "24px",
-  outerSpacing = "0px 20px",
+  outerSpacing = "0px 0px 20px 0px",
   header,
   headerBackgroundColor = "#fff",
   content,
@@ -74,25 +113,30 @@ export const Card: React.FC<CardProps> = ({
     topRight: topRightRadius,
     bottomLeft: bottomLeftRadius,
     bottomRight: bottomRightRadius,
-  } = breakDownValues(borderRadius);
+  } = breakDownBorderRadiusValues(borderRadius);
   const {
-    topLeft: topLeftPadding,
-    topRight: topRightPadding,
-    bottomLeft: bottomLeftPadding,
-    bottomRight: bottomRightPadding,
-  } = breakDownValues(padding);
+    top: topPadding,
+    right: rightPadding,
+    bottom: bottomPadding,
+    left: leftPadding,
+  } = breakDownPaddingValues(padding);
   const {
-    topLeft: topLeftOuterSpacing,
-    topRight: topRightOuterSpacing,
-    bottomLeft: bottomLeftOuterSpacing,
-    bottomRight: bottomRightOuterSpacing,
-  } = breakDownValues(outerSpacing);
+    top: topOuterSpacing,
+    right: rightOuterSpacing,
+    bottom: bottomOuterSpacing,
+    left: leftOuterSpacing,
+  } = breakDownPaddingValues(outerSpacing);
 
   const getHeaderStyle = () => {
     const style: React.CSSProperties = {};
     style.backgroundColor = headerBackgroundColor;
-    style.padding = `${topLeftPadding} ${topRightPadding}`;
-    style.borderRadius = `${topLeftRadius} ${topRightRadius}`;
+    if (content || footer) {
+      style.padding = `${topPadding} ${rightPadding} 0px ${leftPadding}`;
+      style.borderRadius = `${topLeftRadius} ${topRightRadius} 0px 0px`;
+    } else {
+      style.padding = padding;
+      style.borderRadius = borderRadius;
+    }
     return style;
   };
 
@@ -103,13 +147,14 @@ export const Card: React.FC<CardProps> = ({
       style.padding = padding;
       style.borderRadius = borderRadius;
     } else if (header && !footer) {
-      style.padding = `${topLeftPadding} ${topRightPadding}`;
-      style.borderRadius = `${bottomLeftRadius} ${bottomRightRadius}`;
+      style.padding = `0px ${rightPadding} 0px ${leftPadding}`;
+      style.borderRadius = `0px 0px ${bottomRightRadius} ${bottomLeftRadius}`;
     } else if (!header && footer) {
-      style.padding = `${topLeftPadding} ${topRightPadding}`;
-      style.borderRadius = `${topLeftRadius} ${topRightRadius}`;
-    } else {
-      style.padding = `${topLeftPadding} ${topRightPadding}`;
+      style.padding = `${topPadding} ${rightPadding} 0px ${leftPadding}`;
+      style.borderRadius = `${topLeftRadius} ${topRightRadius} 0px 0px`;
+    } else if (header && footer) {
+      style.padding = `0px ${rightPadding} 0px ${leftPadding}`;
+      style.borderRadius = `0px 0px 0px 0px`;
     }
     return style;
   };
@@ -117,8 +162,13 @@ export const Card: React.FC<CardProps> = ({
   const getFooterStyle = () => {
     const style: React.CSSProperties = {};
     style.backgroundColor = footerBackgroundColor;
-    style.padding = `${bottomLeftPadding} ${bottomRightPadding}`;
-    style.borderRadius = `${bottomLeftRadius} ${bottomRightRadius}`;
+    if(!header && !content) {
+      style.padding = padding;
+      style.borderRadius = borderRadius;
+    } else if (header || content) {
+      style.padding = `0px ${rightPadding} ${bottomPadding} ${leftPadding}`;
+      style.borderRadius = `0px 0px ${bottomRightRadius} ${bottomLeftRadius}`;
+    }
     return style;
   };
 

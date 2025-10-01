@@ -62,7 +62,7 @@
     "@inkdes-email/body": "workspace:^0.2.3",
     "@inkdes-email/body-contents": "workspace:^0.2.2",
     "@inkdes-email/button": "workspace:^0.2.1",
-    "@inkdes-email/card": "workspace:^0.1.0",
+    "@inkdes-email/card": "workspace:^0.1.1",
     "@inkdes-email/font": "workspace:^0.2.1",
     "@inkdes-email/head": "workspace:^0.2.0",
     "@inkdes-email/html": "workspace:^0.2.0",

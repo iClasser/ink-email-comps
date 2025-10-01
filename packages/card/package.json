@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/card",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React email card component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",

@@ -38,7 +38,7 @@ export default function EmailTemplate() {
         borderRadius='24px' 
         padding='12px 15px'
         width='100%'
-        outerSpacing='0px 20px' 
+        outerSpacing='0px 0px 20px 0px' 
      />
   </>
 }
@@ -56,7 +56,7 @@ export default function EmailTemplate() {
 | footerBackgroundColor | string | No | #fff | — |
 | borderRadius | string | No | `24px` | — |
 | padding | string | No | `` | inner padding |
-| outerSpacing | string | No | `0px 20px` | outside spacing |
+| outerSpacing | string | No | `0px 0px 20px 0px` | outside spacing |
 | width | string | No | `100%` |  |
 
 ## License
