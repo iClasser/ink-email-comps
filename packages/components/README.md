@@ -8,6 +8,18 @@ InkDes react email components library. You can create emails with these componen
   </hr>
 </div>
 
+
+<div style='text-align:center'>
+  <a href='https://www.npmjs.com/package/@inkdes-email/components'>NPM package<a>
+  </hr>
+</div>
+
+
+<div style='text-align:center'>
+  <a href='https://inkdes.com'>Website<a>
+  </hr>
+</div>
+
 ## Installation
 
 ```bash
@@ -24,7 +36,7 @@ yarn add @inkdes-email/components
 ## Quick start
 
 ```tsx
-import { Html, Head, Font, Body, Img, Text, Button } from "@inkdes-email/components";
+import { Html, Head, Font, Body, Img, Text, Card, Button } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
@@ -44,6 +56,18 @@ export default function EmailTemplate() {
   <Body previewText='Some preview pre-header text.' width={376} padding='20px 20px' outerBgColor='#fff' backgroundColor='#dedede'>
     <Img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png" alt="Cat" width={48} height={48} borderRadius='100%' />;
     <Text fontSize='14px' fontWeight='400' fontColor='#000'>Hello world!</Text>
+    <Card 
+        header={<Text>Some header</Text>}
+        content={<Text>Some content</Text>}
+        footer={<Text>Some footer</Text>}
+        headerBackgroundColor='#fff'
+        contentBackgroundColor='#fff'
+        footerBackgroundColor='#fff'
+        borderRadius='24px' 
+        padding='12px 15px'
+        width='100%'
+        outerSpacing='0px 20px' 
+     />
     <Button align='center' href='#' text='Confirm' backgroundColor='#000' textColor='#fff' />
   </Body>
 </Html>
@@ -60,6 +84,7 @@ export default function EmailTemplate() {
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/button'>Button</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/img'>Img</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/card'>Card</a>
 
 ## Support
 

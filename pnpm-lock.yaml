@@ -133,6 +133,19 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/card:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/components:
     dependencies:
       '@inkdes-email/body':
@@ -144,6 +157,9 @@ importers:
       '@inkdes-email/button':
         specifier: workspace:0.2.1
         version: link:../button
+      '@inkdes-email/card':
+        specifier: workspace:0.1.0
+        version: link:../card
       '@inkdes-email/font':
         specifier: workspace:0.2.1
         version: link:../font
