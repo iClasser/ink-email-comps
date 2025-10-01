@@ -1,7 +1,7 @@
 # @inkdes-email/components
 InkDes react email components library. You can create emails with these components well tested for email compatibility.
 <br />
-<img width="512" height="512" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
+<img width="80" height="80" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
 
 
 <div style='text-align:center'>
