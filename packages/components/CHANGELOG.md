@@ -1,71 +1,129 @@
 # @inkdes-email/components
+InkDes react email components library. You can create emails with these components well tested for email compatibility.
+<br />
+<br />
+<img width="80" height="80" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
+<br />
 
-## 0.3.0
+<div style='text-align:center'>
+  <a href='https://github.com/iClasser/inkdes-email-comps'>GitHub<a>
+  </hr>
+</div>
 
-### Minor Changes
 
-- 2fd9bc2: fixed body
+<div style='text-align:center'>
+  <a href='https://www.npmjs.com/package/@inkdes-email/components'>NPM package<a>
+  </hr>
+</div>
 
-### Patch Changes
 
-- 2fd9bc2: Ensure build artifacts are included via prepack.
-- Updated dependencies [2fd9bc2]
-  - @inkdes-email/body@0.2.2
+<div style='text-align:center'>
+  <a href='https://inkdes.com'>Website<a>
+  </hr>
+</div>
 
-## 0.2.1
+## Installation
 
-### Patch Changes
+```bash
+# pnpm
+pnpm add @inkdes-email/components
 
-- f351f65: Update body-content implementation and aggregate in components.
-- Updated dependencies [f351f65]
-  - @inkdes-email/body-content@0.2.1
-  - @inkdes-email/body@0.2.1
+# npm
+npm install @inkdes-email/components
 
-## 0.2.0
+# yarn
+yarn add @inkdes-email/components
+```
 
-### Minor Changes
+## Quick start
 
-- fec2272: Fixed un-necessary required props
+```tsx
+import { Html, Head, Font, Body, Img, Text, Card, Button } from "@inkdes-email/components";
 
-### Patch Changes
+export default function EmailTemplate() {
+  return <Html>
+  <Head>
+    <Font
+      family="Inter"
+      url="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZJhiJ-Ek-_EeAmM.woff2"
+      format="woff2"
+      fallback="Arial"
+      style="normal"
+      weight="400"
+      targetClasses={[]}
+      targetTags={['html', 'body', 'button']}
+    />
+    <title>Platform name</title>
+  </Head>
+  <Body
+    previewText="Some preview pre-header text."
+    width={376}
+    padding="20px 20px"
+    outerBgColor="#fff"
+    backgroundColor="#f2f6f7"
+  >
+    <Img
+      src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60"
+      alt="Cat"
+      width={48}
+      height={48}
+    />
+    <Text fontSize="14px" fontWeight="400" fontColor="#000">
+      Hello from InkDes!
+    </Text>
 
-- Updated dependencies [d3fd9f5]
-- Updated dependencies [fec2272]
-  - @inkdes-email/html@0.2.0
-  - @inkdes-email/body-content@0.2.0
-  - @inkdes-email/button@0.2.0
-  - @inkdes-email/body@0.2.0
-  - @inkdes-email/font@0.2.0
-  - @inkdes-email/head@0.2.0
-  - @inkdes-email/img@0.2.0
+    <Card
+      header={
+        <Fragment>
+          <Img
+            src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/75.0.1/chromium/chromium_48x48.png"
+            alt="Cat"
+            width={48}
+            height={48}
+            borderRadius="100%"
+          />
+          <Text textColor="white" fontSize="20px">
+            InkDes
+          </Text>
+        </Fragment>
+      }
+      headerBackgroundColor="#000"
+      content={<Text>Welcome to InkDes!</Text>}
+      borderRadius="24px"
+      padding="12px 15px"
+      width="100%"
+    />
+    <Button
+      align="center"
+      href="https://inkdes.com"
+      text="Confirm"
+      backgroundColor="#000"
+      textColor="#fff"
+    />
+  </Body>
+</Html>
+}
+```
 
-## 0.1.0
+## Components
 
-### Minor Changes
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/html'>Html</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/head'>Head</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/font'>Font</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body'>Body</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/body-contents'>BodyContents</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/button'>Button</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/img'>Img</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/card'>Card</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/badge'>Badge</a>
 
-- Props fixing, removed strict
+## Support
 
-### Patch Changes
+This component was tested using the most popular email clients.
 
-- Updated dependencies
-  - @inkdes-email/body-content@0.1.0
-  - @inkdes-email/button@0.1.0
-  - @inkdes-email/body@0.1.0
-  - @inkdes-email/font@0.1.0
-  - @inkdes-email/head@0.1.0
-  - @inkdes-email/html@0.1.0
-  - @inkdes-email/img@0.1.0
+## License
 
-## 0.0.2
+MIT © iClasser
 
-### Patch Changes
 
-- cbea60b: Initial publish of core packages to @inkdes-email.
-- Updated dependencies [cbea60b]
-  - @inkdes-email/body@0.0.2
-  - @inkdes-email/body-content@0.0.2
-  - @inkdes-email/button@0.0.2
-  - @inkdes-email/font@0.0.2
-  - @inkdes-email/head@0.0.2
-  - @inkdes-email/html@0.0.2
-  - @inkdes-email/img@0.0.2
