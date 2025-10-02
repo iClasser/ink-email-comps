@@ -91,6 +91,19 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/badge:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/body:
     dependencies:
       '@inkdes-email/body-contents':
@@ -148,6 +161,9 @@ importers:
 
   packages/components:
     dependencies:
+      '@inkdes-email/badge':
+        specifier: workspace:^0.1.0
+        version: link:../badge
       '@inkdes-email/body':
         specifier: workspace:^0.2.3
         version: link:../body

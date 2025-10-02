@@ -7,3 +7,4 @@ export { Button} from "@inkdes-email/button";
 export { Img} from "@inkdes-email/img";
 export { Text} from "@inkdes-email/text";
 export { Card} from "@inkdes-email/card";
+export { Badge} from "@inkdes-email/badge";
