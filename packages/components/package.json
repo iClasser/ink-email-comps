@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -70,7 +70,7 @@
     "@inkdes-email/html": "workspace:^0.2.0",
     "@inkdes-email/hr": "workspace:^0.1.0",
     "@inkdes-email/img": "workspace:^0.2.1",
-    "@inkdes-email/table": "workspace:^0.1.3",
+    "@inkdes-email/table": "workspace:^0.1.4",
     "@inkdes-email/text": "workspace:^0.1.1"
   },
   "publishConfig": {

@@ -226,7 +226,7 @@ importers:
         specifier: workspace:^0.2.1
         version: link:../img
       '@inkdes-email/table':
-        specifier: workspace:^0.1.3
+        specifier: workspace:^0.1.4
         version: link:../table
       '@inkdes-email/text':
         specifier: workspace:^0.1.1

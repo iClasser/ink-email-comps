@@ -126,7 +126,7 @@ const Row: React.FC<TableRowProps> = ({
     [padding, border, borderColor, parentContext]
   );
   if (backgroundColor) {
-    rowProps.bgColor = backgroundColor;
+    rowProps.bgcolor = backgroundColor;
     rowStyles.backgroundColor = backgroundColor;
   }
   if (align) {
@@ -186,7 +186,7 @@ const Col: React.FC<TableColProps> = ({
     borderColor ?? context?.borderColor;
   const effectivePadding: string | undefined = padding ?? context?.padding;
   if (backgroundColor) {
-    colProps.bgColor = backgroundColor;
+    colProps.bgcolor = backgroundColor;
     colStyles.backgroundColor = backgroundColor;
   }
   // Side-specific borders to avoid double borders.

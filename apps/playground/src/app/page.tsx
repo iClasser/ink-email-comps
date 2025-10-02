@@ -7,9 +7,9 @@ export default function Page() {
     <main style={{ padding: 24 }}>
       <h1>Playground</h1>
       <p>Basic Table preview:</p>
-      <Table padding="12px" border borderColor="#ddd" width="100%">
-        <Table.Row>
-          <Table.Col width="20%">Left</Table.Col>
+      <Table padding="12px" border borderColor="#ddd" width="100%" backgroundColor="#f0f0f0">
+        <Table.Row  backgroundColor="#f0f0f0">
+          <Table.Col>Left</Table.Col>
           <Table.Col>Right</Table.Col>
         </Table.Row>
         <Table.Row>
