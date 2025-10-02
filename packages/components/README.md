@@ -115,6 +115,8 @@ export default function EmailTemplate() {
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/card'>Card</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/badge'>Badge</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/hr'>Hr</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/table'>Table</a>
 
 ## Support
 

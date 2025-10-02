@@ -23,7 +23,8 @@
     "build:packages:publish": "pnpm turbo run build --filter './packages/*' --filter './rootPackage/*' && pnpm changeset publish",
     "lint": "echo 'no lint configured'",
     "version": "changeset version && pnpm install --no-frozen-lockfile",
-    "release": "turbo run build --filter=./packages/* --filter './rootPackage/*' && pnpm changeset publish"
+    "release": "turbo run build --filter=./packages/* --filter './rootPackage/*' && pnpm changeset publish",
+    "clean:install": "pnpm clean && pnpm install && pnpm build && pnpm changeset"
   },
   "keywords": [
     "react",

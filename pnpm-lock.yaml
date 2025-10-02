@@ -182,12 +182,18 @@ importers:
       '@inkdes-email/head':
         specifier: workspace:^0.2.0
         version: link:../head
+      '@inkdes-email/hr':
+        specifier: workspace:^0.1.0
+        version: link:../hr
       '@inkdes-email/html':
         specifier: workspace:^0.2.0
         version: link:../html
       '@inkdes-email/img':
         specifier: workspace:^0.2.1
         version: link:../img
+      '@inkdes-email/table':
+        specifier: workspace:^0.1.0
+        version: link:../table
       '@inkdes-email/text':
         specifier: workspace:^0.1.1
         version: link:../text
@@ -228,6 +234,19 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/hr:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/html:
     dependencies:
       react:
@@ -242,6 +261,19 @@ importers:
         version: 5.8.3
 
   packages/img:
+    dependencies:
+      react:
+        specifier: ^18.0 || ^19.0 || ^19.0.0-rc
+        version: 19.1.1
+    devDependencies:
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
+  packages/table:
     dependencies:
       react:
         specifier: ^18.0 || ^19.0 || ^19.0.0-rc

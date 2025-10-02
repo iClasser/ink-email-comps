@@ -1,12 +1,27 @@
 # @inkdes-email/button
-Display an button in your email.
+Button component for email.
 <br />
-
+<br />
+<img width="80" height="80" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
+<br />
 
 <div style='text-align:center'>
   <a href='https://github.com/iClasser/inkdes-email-comps'>GitHub<a>
   </hr>
 </div>
+
+
+<div style='text-align:center'>
+  <a href='https://www.npmjs.com/package/@inkdes-email/components'>NPM package<a>
+  </hr>
+</div>
+
+
+<div style='text-align:center'>
+  <a href='https://inkdes.com'>Website<a>
+  </hr>
+</div>
+
 
 ## Installation
 

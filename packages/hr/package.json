@@ -1,7 +1,7 @@
 {
-  "name": "@inkdes-email/components",
-  "version": "0.6.0",
-  "description": "All InkDes email components in one package",
+  "name": "@inkdes-email/hr",
+  "version": "0.1.0",
+  "description": "A React email seperator component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
-    "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
+    "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -33,20 +33,19 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/components"
+    "directory": "packages/hr"
   },
   "keywords": [
     "react",
     "email",
-    "inkdes",
-    "email-components",
     "email-notification",
-    "react-email-components",
+    "react-email-component",
     "react-email",
     "send-email",
     "email-component",
     "inkdes-mailer",
-    "inkdes-email-comps"
+    "inkdes-email-comps",
+    "inkdes"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -55,22 +54,8 @@
     "react": "^18.0 || ^19.0 || ^19.0.0-rc"
   },
   "devDependencies": {
-    "typescript": "5.8.3",
-    "tsconfig": "workspace:*"
-  },
-  "dependencies": {
-    "@inkdes-email/badge": "workspace:^0.1.0",
-    "@inkdes-email/body": "workspace:^0.2.3",
-    "@inkdes-email/body-contents": "workspace:^0.2.2",
-    "@inkdes-email/button": "workspace:^0.2.1",
-    "@inkdes-email/card": "workspace:^0.1.1",
-    "@inkdes-email/font": "workspace:^0.2.1",
-    "@inkdes-email/head": "workspace:^0.2.0",
-    "@inkdes-email/html": "workspace:^0.2.0",
-    "@inkdes-email/hr": "workspace:^0.1.0",
-    "@inkdes-email/img": "workspace:^0.2.1",
-    "@inkdes-email/table": "workspace:^0.1.0",
-    "@inkdes-email/text": "workspace:^0.1.1"
+    "tsconfig": "workspace:*",
+    "typescript": "5.8.3"
   },
   "publishConfig": {
     "access": "public"

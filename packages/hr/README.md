@@ -1,6 +1,6 @@
-# @inkdes-email/text
+# @inkdes-email/hr
 
-Body wrapper for your email layout.
+Sperator component for email
 <br />
 <br />
 <img width="80" height="80" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
@@ -27,24 +27,24 @@ Body wrapper for your email layout.
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/text
+pnpm add @inkdes-email/hr
 
 # npm
-npm install @inkdes-email/text
+npm install @inkdes-email/hr
 
 # yarn
-yarn add @inkdes-email/text
+yarn add @inkdes-email/hr
 ```
 
 ## Quick start
 
 ```tsx
-import { Body } from "@inkdes-email/text";
+import { Hr } from "@inkdes-email/hr";
 
 export default function EmailTemplate() {
-  return <Text spacingBottom='10px' fontWeight='400' fontFamily='Arial' fontSize='20px'>
-  Hello world!
-  </Text>;
+  return <>
+      <Hr />
+  </>
 }
 ```
 
@@ -52,14 +52,10 @@ export default function EmailTemplate() {
 
 | Name     | Type            | Required | Default | Description |
 | -------- | --------------- | -------- | ------- | ----------- |
-| children | React.ReactNode | Yes      | —       | Content of the email document |
-| textColor | string | No      | —       | `#000` |
-| fontSize | string | No      | —       |  |
-| fontWeight | string | No      | —       |  |
-| className | string | No      | —       |  |
-| spacingBottom | string | No      | —       |  |
+| color | string | No | `#e5e5e5` |  |
+| spacing | string | No | `0px 0px 20px 0px` | outside spacing |
+| width | string | No | `100%` | width of seperator |
 
-All other standard attributes for the `<body>` element are supported.
 
 ## License
 
