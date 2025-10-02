@@ -34,7 +34,7 @@ export const Button = ({
   direction = "ltr",
   textColor = "#fff",
   borderRadius = "12px",
-  outerSpacing = "0",
+  outerSpacing = "0px 0px 20px 0px",
   style = {
     fontSize: 16,
     fontWeight: 600,

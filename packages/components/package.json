@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/components",
-  "version": "0.6.0",
+  "version": "0.6.6",
   "description": "All InkDes email components in one package",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -25,6 +25,7 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --watch",
+    "dev": "pnpm run build:watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -62,14 +63,14 @@
     "@inkdes-email/badge": "workspace:^0.1.0",
     "@inkdes-email/body": "workspace:^0.2.3",
     "@inkdes-email/body-contents": "workspace:^0.2.2",
-    "@inkdes-email/button": "workspace:^0.2.1",
+    "@inkdes-email/button": "workspace:^0.2.2",
     "@inkdes-email/card": "workspace:^0.1.1",
     "@inkdes-email/font": "workspace:^0.2.1",
     "@inkdes-email/head": "workspace:^0.2.0",
     "@inkdes-email/html": "workspace:^0.2.0",
     "@inkdes-email/hr": "workspace:^0.1.0",
     "@inkdes-email/img": "workspace:^0.2.1",
-    "@inkdes-email/table": "workspace:^0.1.0",
+    "@inkdes-email/table": "workspace:^0.1.3",
     "@inkdes-email/text": "workspace:^0.1.1"
   },
   "publishConfig": {

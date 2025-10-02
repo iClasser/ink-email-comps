@@ -36,7 +36,7 @@ yarn add @inkdes-email/components
 ## Quick start
 
 ```tsx
-import { Html, Head, Font, Body, Img, Text, Card, Button } from "@inkdes-email/components";
+import { Html, Head, Font, Body, Img, Text, Card, Table, Button } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
@@ -91,6 +91,18 @@ export default function EmailTemplate() {
       padding="12px 15px"
       width="100%"
     />
+
+    <Table border padding='10px'>
+      <Table.Row align="left" valign="middle">
+        <Table.Col>Cell 1</Table.Col>
+        <Table.Col>Cell 2</Table.Col>
+      </Table.Row>
+      <Table.Row >
+        <Table.Col>Cell 1</Table.Col>
+        <Table.Col>Cell 2</Table.Col>
+      </Table.Row>
+    </Table>
+
     <Button
       align="center"
       href="https://inkdes.com"

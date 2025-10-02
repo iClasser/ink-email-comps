@@ -8,3 +8,5 @@ export { Img} from "@inkdes-email/img";
 export { Text} from "@inkdes-email/text";
 export { Card} from "@inkdes-email/card";
 export { Badge} from "@inkdes-email/badge";
+export { Hr} from "@inkdes-email/hr";
+export { Table} from "@inkdes-email/table";

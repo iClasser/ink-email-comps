@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/button",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Display a button in your email (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -25,6 +25,7 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
+    "dev": "pnpm run build:watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",

@@ -12,6 +12,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "dev:watch": "turbo run dev --filter './packages/*' --parallel",
     "gen:ink": "pnpm dlx tsx tools/generate-ink-aggregator.ts",
     "build:ink": "pnpm -C rootPackage/inkdes-email-comps build",
     "clean": "pnpm run clean:packages",
@@ -24,7 +25,8 @@
     "lint": "echo 'no lint configured'",
     "version": "changeset version && pnpm install --no-frozen-lockfile",
     "release": "turbo run build --filter=./packages/* --filter './rootPackage/*' && pnpm changeset publish",
-    "clean:install": "pnpm clean && pnpm install && pnpm build && pnpm changeset"
+    "clean:install": "pnpm clean && pnpm install && pnpm build && pnpm changeset",
+    "playground": "pnpm -C apps/playground dev"
   },
   "keywords": [
     "react",

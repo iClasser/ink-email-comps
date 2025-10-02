@@ -66,7 +66,7 @@ import { Button } from "@inkdes-email/button";
 | direction          | string               | No       | "ltr"      |                |
 | textColor          | string               | No       |       |   css color hex             |
 | borderRadius          | string               | No       |       |              |
-| outerSpacing          | string               | No       |       |              |
+| outerSpacing          | string               | No       |   "0px 0px 20px 0px"    |              |
 | style          | string               | No       |       |  CSS style            |
 
 

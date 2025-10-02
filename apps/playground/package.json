@@ -1,0 +1,27 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "echo 'Skipping playground build'",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.5.2",
+    "react": "^19",
+    "react-dom": "^19",
+    "@inkdes-email/table": "workspace:*",
+    "@inkdes-email/components": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "tsconfig": "workspace:*",
+    "typescript": "5.8.3"
+  }
+}
+
+
+

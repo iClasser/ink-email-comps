@@ -19,9 +19,12 @@ interface TableContextValue {
   borderColor?: string;
 }
 
-const TableContext = React.createContext<TableContextValue | undefined>(undefined);
+const TableContext = React.createContext<TableContextValue | undefined>(
+  undefined
+);
 
 export const Table: React.FC<TableProps> = ({
+  children,
   spacing = "0px 0px 20px 0px",
   padding = "10px",
   border = false,
@@ -30,19 +33,19 @@ export const Table: React.FC<TableProps> = ({
 }) => {
   const tableOuterStyles: React.CSSProperties = {};
   const tableStyles: React.CSSProperties = {};
-  const contextValue = React.useMemo<TableContextValue>(() => ({
-    padding,
-    border,
-    borderColor,
-  }), [padding, border, borderColor]);
+  const contextValue = React.useMemo<TableContextValue>(
+    () => ({
+      padding,
+      border,
+      borderColor,
+    }),
+    [padding, border, borderColor]
+  );
   if (spacing) {
     tableOuterStyles.padding = spacing;
   }
   if (padding) {
     tableStyles.padding = padding;
-  }
-  if (border) {
-    tableStyles.border = `1px solid ${borderColor}`;
   }
   const renderChildren = () => {
     return (
@@ -53,12 +56,19 @@ export const Table: React.FC<TableProps> = ({
         cellSpacing="0"
         role="presentation"
         width={width}
+        style={tableStyles}
       >
-        <tr>
-          <td style={tableStyles}>
-            <TableContext.Provider value={contextValue}>{children}</TableContext.Provider>
-          </td>
-        </tr>
+        <tbody>
+          <TableContext.Provider value={contextValue}>
+            {React.Children.map(children, (child, index) =>
+              React.isValidElement(child)
+                ? React.cloneElement(child as React.ReactElement<any>, {
+                    __isFirstRow: index === 0,
+                  })
+                : child
+            )}
+          </TableContext.Provider>
+        </tbody>
       </table>
     );
   };
@@ -71,9 +81,11 @@ export const Table: React.FC<TableProps> = ({
       role="presentation"
       width="100%"
     >
-      <tr>
-        <td style={tableOuterStyles}>{renderChildren()}</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td style={tableOuterStyles}>{renderChildren()}</td>
+        </tr>
+      </tbody>
     </table>
   ) : (
     renderChildren()
@@ -83,30 +95,36 @@ export const Table: React.FC<TableProps> = ({
 interface TableRowProps extends React.ComponentPropsWithoutRef<"tr"> {
   children: React.ReactNode;
   backgroundColor?: string;
-  vAlign?: "top" | "middle" | "bottom";
+  valign?: "top" | "middle" | "bottom";
   align?: "left" | "center" | "right";
   padding?: string;
   border?: boolean;
   borderColor?: string;
+  /** internal: set by Table */
+  __isFirstRow?: boolean;
 }
 
 const Row: React.FC<TableRowProps> = ({
   children,
   backgroundColor,
   align = "left",
-  vAlign = "middle",
+  valign = "middle",
   padding,
   border,
   borderColor,
+  __isFirstRow,
 }: TableRowProps) => {
   const rowStyles: React.CSSProperties = {};
   const rowProps: React.ComponentPropsWithoutRef<"tr"> = {};
   const parentContext = React.useContext(TableContext);
-  const rowContext: TableContextValue = React.useMemo(() => ({
-    padding: padding ?? parentContext?.padding,
-    border: typeof border === "boolean" ? border : parentContext?.border,
-    borderColor: borderColor ?? parentContext?.borderColor,
-  }), [padding, border, borderColor, parentContext]);
+  const rowContext: TableContextValue = React.useMemo(
+    () => ({
+      padding: padding ?? parentContext?.padding,
+      border: typeof border === "boolean" ? border : parentContext?.border,
+      borderColor: borderColor ?? parentContext?.borderColor,
+    }),
+    [padding, border, borderColor, parentContext]
+  );
   if (backgroundColor) {
     rowProps.bgColor = backgroundColor;
     rowStyles.backgroundColor = backgroundColor;
@@ -114,13 +132,22 @@ const Row: React.FC<TableRowProps> = ({
   if (align) {
     rowProps.align = align;
   }
-  if (vAlign) {
-    rowProps.vAlign = vAlign;
+  if (valign) {
+    rowProps.valign = valign;
   }
 
   return (
     <tr style={rowStyles} {...rowProps}>
-      <TableContext.Provider value={rowContext}>{children}</TableContext.Provider>
+      <TableContext.Provider value={rowContext}>
+        {React.Children.map(children, (child, index) =>
+          React.isValidElement(child)
+            ? React.cloneElement(child as React.ReactElement<any>, {
+                __isFirstCol: index === 0,
+                __isFirstRow,
+              })
+            : child
+        )}
+      </TableContext.Provider>
     </tr>
   );
 };
@@ -132,7 +159,12 @@ interface TableColProps extends React.ComponentPropsWithoutRef<"td"> {
   borderColor?: string;
   border?: boolean;
   padding?: string;
+  width?: string;
   backgroundColor?: string;
+  /** internal: set by Row */
+  __isFirstCol?: boolean;
+  /** internal: set by Table/Row */
+  __isFirstRow?: boolean;
 }
 
 const Col: React.FC<TableColProps> = ({
@@ -140,24 +172,43 @@ const Col: React.FC<TableColProps> = ({
   borderColor,
   border,
   padding,
+  width,
   backgroundColor,
+  __isFirstCol,
+  __isFirstRow,
 }: TableColProps) => {
   const colStyles: React.CSSProperties = {};
   const colProps: React.ComponentPropsWithoutRef<"td"> = {};
   const context = React.useContext(TableContext);
   const effectiveBorder: boolean | undefined =
     typeof border === "boolean" ? border : context?.border;
-  const effectiveBorderColor: string | undefined = borderColor ?? context?.borderColor;
+  const effectiveBorderColor: string | undefined =
+    borderColor ?? context?.borderColor;
   const effectivePadding: string | undefined = padding ?? context?.padding;
   if (backgroundColor) {
     colProps.bgColor = backgroundColor;
     colStyles.backgroundColor = backgroundColor;
   }
+  // Side-specific borders to avoid double borders.
   if (effectiveBorder) {
-    colProps.border = `1px solid ${effectiveBorderColor ?? "#e5e5e5"}`;
+    const color = effectiveBorderColor ?? "#e5e5e5";
+    // Every cell gets right and bottom border
+    colStyles.borderRight = `1px solid ${color}`;
+    colStyles.borderBottom = `1px solid ${color}`;
+    // First row cells get top border
+    if (__isFirstRow) {
+      colStyles.borderTop = `1px solid ${color}`;
+    }
+    // First column cells get left border
+    if (__isFirstCol) {
+      colStyles.borderLeft = `1px solid ${color}`;
+    }
   }
   if (effectivePadding) {
-    colProps.padding = effectivePadding;
+    colStyles.padding = effectivePadding;
+  }
+  if (width) {
+    colProps.width = width;
   }
   return (
     <td style={colStyles} {...colProps}>

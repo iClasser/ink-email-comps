@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/table",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A React email table component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -25,6 +25,7 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
+    "dev": "pnpm run build:watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",
