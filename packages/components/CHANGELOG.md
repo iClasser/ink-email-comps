@@ -38,7 +38,7 @@ yarn add @inkdes-email/components
 ## Quick start
 
 ```tsx
-import { Html, Head, Font, Body, Img, Text, Card, Button } from "@inkdes-email/components";
+import { Html, Head, Font, Body, Img, Text, Card, A, Button } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
@@ -83,7 +83,7 @@ export default function EmailTemplate() {
             borderRadius="100%"
           />
           <Text textColor="white" fontSize="20px">
-            InkDes
+            InkDes <A href='https://inkdes.com' noDecoration color='blue'>InkDes.com</A>
           </Text>
         </Fragment>
       }
@@ -117,6 +117,7 @@ export default function EmailTemplate() {
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/text'>Text</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/card'>Card</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/badge'>Badge</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/a'>A</a>
 
 ## Support
 

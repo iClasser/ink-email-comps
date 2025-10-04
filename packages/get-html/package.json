@@ -1,7 +1,7 @@
 {
-  "name": "@inkdes-email/button",
-  "version": "0.2.3",
-  "description": "Display a button in your email (InkDes Mailer)",
+  "name": "@inkdes-email/get-html",
+  "version": "0.1.0",
+  "description": "A React email helper to get the HTML of a React email component (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -25,7 +25,6 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
-    "dev": "pnpm run build:watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -34,13 +33,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/button"
+    "directory": "packages/get-html"
   },
   "keywords": [
     "react",
     "email",
     "email-notification",
-    "button",
     "react-email-component",
     "react-email",
     "send-email",
@@ -61,5 +59,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "react-dom": "^19.1.1"
   }
 }

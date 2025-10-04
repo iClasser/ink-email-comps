@@ -40,7 +40,7 @@ yarn add @inkdes-email/components
 ## Quick start
 
 ```tsx
-import { Html, Head, Font, Body, Img, Text, Card, Table, Button } from "@inkdes-email/components";
+import { Html, Head, Font, Body, Img, Text, Card, Table, Button, getHtml } from "@inkdes-email/components";
 
 export default function EmailTemplate() {
   return <Html>
@@ -117,6 +117,14 @@ export default function EmailTemplate() {
   </Body>
 </Html>
 }
+
+
+const [html, error] = getHtml(<EmailTemplate />);
+if (error) {
+  // handle error
+} else if (html) {
+  // use html
+}
 ```
 
 ## Components
@@ -133,6 +141,10 @@ export default function EmailTemplate() {
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/badge'>Badge</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/hr'>Hr</a>
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/table'>Table</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/a'>A</a>
+
+ # Helper
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/get-html'>getHtml</a>
 
 ## Support
 

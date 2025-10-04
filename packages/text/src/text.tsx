@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export interface TextProps extends React.ComponentPropsWithoutRef<"body"> {
+export interface TextProps extends React.ComponentPropsWithoutRef<"table"> {
   children: React.ReactNode;
   center?: boolean;
   spacingBottom?: string;
@@ -9,6 +9,7 @@ export interface TextProps extends React.ComponentPropsWithoutRef<"body"> {
   fontSize?: string;
   textColor?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export enum TextClassNamesEnum {
@@ -23,6 +24,7 @@ export const Text: React.FC<TextProps> = ({
   fontWeight,
   fontFamily,
   fontSize,
+  style,
   textColor = '#000',
   className = '',
   ...props
@@ -47,13 +49,18 @@ export const Text: React.FC<TextProps> = ({
   if (props.style) {
     Object.assign(styles, props.style);
   }
+  if(style) {
+    Object.assign(styles, style);
+  }
   
   const wrapperStyles: React.CSSProperties = {};
   Object.assign(wrapperStyles, spacingBottom && { spacingBottom });
-
+  if(center) {
+    wrapperStyles.textAlign = "center";
+  }
 
   return (
-    <table border="0" cellPadding="0" cellSpacing="0" role="presentation">
+    <table border="0" cellPadding="0" cellSpacing="0" role="presentation" width="100%">
       <tr>
         <td align={center ? "center" : undefined} dir="ltr" className={`${className} ${TextClassNamesEnum.wrapper}`} style={wrapperStyles}>
           <p style={styles} className={`${TextClassNamesEnum.text}`}>{children}</p>

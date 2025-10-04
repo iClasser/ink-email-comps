@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/body-contents",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "A React email body content component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",

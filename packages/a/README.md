@@ -1,6 +1,6 @@
-# @inkdes-email/text
+# @inkdes-email/a
 
-Body wrapper for your email layout.
+Anchor for email components
 <br />
 <br />
 <img width="80" height="80" alt="inkdes-logo" src="https://github.com/user-attachments/assets/8e885609-d2bb-46ab-a760-ae896757ff60" />
@@ -27,24 +27,24 @@ Body wrapper for your email layout.
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/text
+pnpm add @inkdes-email/a
 
 # npm
-npm install @inkdes-email/text
+npm install @inkdes-email/a
 
 # yarn
-yarn add @inkdes-email/text
+yarn add @inkdes-email/a
 ```
 
 ## Quick start
 
 ```tsx
-import { Body } from "@inkdes-email/text";
+import { A } from "@inkdes-email/a";
 
 export default function EmailTemplate() {
-  return <Text spacingBottom='10px' fontWeight='400' fontFamily='Arial' fontSize='20px'>
-  Hello world!
-  </Text>;
+  return <>
+      <A href='#' color='blue'>Docs</A>
+  </>
 }
 ```
 
@@ -52,15 +52,15 @@ export default function EmailTemplate() {
 
 | Name     | Type            | Required | Default | Description |
 | -------- | --------------- | -------- | ------- | ----------- |
-| children | React.ReactNode | Yes      | —       | Content of the email document |
-| textColor | string | No      | —       | `#000` |
-| fontSize | string | No      | —       |  |
-| fontWeight | string | No      | —       |  |
-| className | string | No      | —       |  |
-| spacingBottom | string | No      | —       |  |
-| style | React.CSSProperties               | No       | —       |  |
+| children | any | No |  |  |
+| color | string | No |  | Hex color |
+| noDecoration | boolean | No | false |  |
+| style | React.CSSProperties | No | |  |
+| rel | React.CSSProperties | No |'noopener noreferrer' |  |
+| rel | React.CSSProperties | No |'noopener noreferrer' |  |
 
-All other standard attributes for the `<body>` element are supported.
+
+
 
 ## License
 

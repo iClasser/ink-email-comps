@@ -12,7 +12,8 @@
     "react": "^19",
     "react-dom": "^19",
     "@inkdes-email/table": "workspace:*",
-    "@inkdes-email/components": "workspace:*"
+    "@inkdes-email/components": "workspace:*",
+    "@inkdes-email/get-html": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

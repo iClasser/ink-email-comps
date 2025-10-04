@@ -36,7 +36,7 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
         {width === "100%" ? (
           <td
             {...innerPaddingAndStyle}
-            bgColor={backgroundColor}
+            bgcolor={backgroundColor}
             width={width}
           >
             {children}
@@ -45,7 +45,7 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
           <>
             {/* outer background */}
             <td
-              bgColor={outerBgColor}
+              bgcolor={outerBgColor}
               style={{
                 padding: "0px",
                 fontSize: "0px",
@@ -55,13 +55,13 @@ export const BodyContents: React.FC<BodyContentsProps> = ({
             <td
               {...innerPaddingAndStyle}
               width={width}
-              bgColor={backgroundColor}
+              bgcolor={backgroundColor}
             >
               {children}
             </td>
             {/* outer background */}
             <td
-              bgColor={outerBgColor}
+              bgcolor={outerBgColor}
               style={{
                 padding: "0px",
                 fontSize: "0px",

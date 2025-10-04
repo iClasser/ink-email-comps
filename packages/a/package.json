@@ -1,7 +1,7 @@
 {
-  "name": "@inkdes-email/button",
-  "version": "0.2.3",
-  "description": "Display a button in your email (InkDes Mailer)",
+  "name": "@inkdes-email/a",
+  "version": "0.1.2",
+  "description": "A React email seperator component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -25,7 +25,6 @@
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts --external react",
     "build:watch": "tsdown src/index.ts --format esm,cjs --dts --external react --watch",
-    "dev": "pnpm run build:watch",
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .turbo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -34,13 +33,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/button"
+    "directory": "packages/a"
   },
   "keywords": [
     "react",
     "email",
     "email-notification",
-    "button",
     "react-email-component",
     "react-email",
     "send-email",

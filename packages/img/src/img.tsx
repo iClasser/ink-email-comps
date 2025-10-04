@@ -9,6 +9,7 @@ export interface ImgProps extends React.ComponentPropsWithoutRef<"img"> {
   direction?: "ltr" | "rtl";
   borderRadius?: string;
   outerSpacing?: string;
+  style?: React.CSSProperties;
 }
 
 export enum ImgClassNamesEnum {
@@ -24,12 +25,16 @@ export const Img: React.FC<ImgProps> = ({
   direction = "ltr",
   outerSpacing,
   borderRadius,
+  style,
   ...props
 }) => {
   const getOtherStyles = () => {
     const styles: React.CSSProperties = {};
     if (borderRadius) {
       styles.borderRadius = borderRadius;
+    }
+    if(style) {
+      Object.assign(styles, style);
     }
     return styles;
   };

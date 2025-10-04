@@ -71,6 +71,7 @@ export default function Email() {
 | direction    | "ltr" \| "rtl"       | No       | "ltr"   | Text direction for the wrapper cell                |
 | borderRadius | string               | No       | —       | Applied as CSS border-radius on the image          |
 | outerSpacing | string               | No       | —       | Padding applied to the wrapper cell (e.g. "16px 0") |
+| style | React.CSSProperties               | No       | —       |  |
 
 ## License
 

@@ -4,6 +4,7 @@ interface HrProps extends React.ComponentPropsWithoutRef<"hr"> {
   color?: string;
   width?: string;
   spacing?: string;
+  style?: React.CSSProperties;
 }
 
 export enum HrClassNamesEnum {
@@ -15,10 +16,14 @@ export const Hr: React.FC<HrProps> = ({
   color = "#e5e5e5",
   width = "100%",
   spacing = "0px 0px 20px 0px",
+  style,
 }) => {
   const hrStyles: React.CSSProperties = {};
   if (color) {
     hrStyles.color = color;
+  }
+  if(style) {
+    Object.assign(hrStyles, style);
   }
   const outerStyles: React.CSSProperties = {};
   if (spacing) {
