@@ -12,6 +12,7 @@ import {
   Button,
   getHtml,
 } from "@inkdes-email/components";
+import { getText } from "@inkdes-email/get-text";
 
 const EmailTemplate = () => {
   return (<Html>
@@ -92,7 +93,7 @@ const EmailTemplate = () => {
 export default function Page() {
   const [htmlString, setHtmlString] = useState<string | null>(null);
   const downloadHtml = () => {
-    const [html, error] = getHtml(
+    const { html, error } = getHtml(
       <EmailTemplate />
     );
     if (html) {
@@ -108,7 +109,7 @@ export default function Page() {
     }
   };
   useEffect(() => {
-    const [html, error] = getHtml(
+    const { html, error } = getHtml(
       <EmailTemplate />
     );
     setHtmlString(html ?? null);
@@ -125,9 +126,14 @@ export default function Page() {
           srcDoc={
             getHtml(
               <EmailTemplate />
-            )[0] ?? null
+            ).html ?? null
           }
       />
+      <pre>
+        <code>{getText(
+              <EmailTemplate />
+            ).text ?? null}</code>
+      </pre>
     </main>
   );
 }

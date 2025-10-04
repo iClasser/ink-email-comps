@@ -119,7 +119,7 @@ export default function EmailTemplate() {
 }
 
 
-const [html, error] = getHtml(<EmailTemplate />);
+const { html, error } = getHtml(<EmailTemplate />);
 if (error) {
   // handle error
 } else if (html) {
@@ -145,6 +145,7 @@ if (error) {
 
  # Helper
  - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/get-html'>getHtml</a>
+ - <a href='https://github.com/iClasser/inkdes-email-comps/tree/canary/packages/get-text'>getText</a>
 
 ## Support
 

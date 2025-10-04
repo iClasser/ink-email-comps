@@ -1,7 +1,7 @@
 {
-  "name": "@inkdes-email/get-html",
-  "version": "0.2.0",
-  "description": "A React email helper to get the HTML of a React email component (InkDes Mailer)",
+  "name": "@inkdes-email/get-text",
+  "version": "0.1.0",
+  "description": "A React email helper to get the text only of a React email component (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -33,7 +33,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iClasser/inkdes-email-comps",
-    "directory": "packages/get-html"
+    "directory": "packages/get-text"
   },
   "keywords": [
     "react",

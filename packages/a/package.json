@@ -1,6 +1,6 @@
 {
   "name": "@inkdes-email/a",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A React email seperator component to wrap emails (InkDes Mailer)",
   "sideEffects": false,
   "main": "./dist/index.js",

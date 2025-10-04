@@ -1,4 +1,4 @@
-### @inkdes-email/get-html
+### @inkdes-email/get-text
 
 Helper function to convert Email components to text only.
 <br />
@@ -27,21 +27,21 @@ Helper function to convert Email components to text only.
 
 ```bash
 # pnpm
-pnpm add @inkdes-email/get-html
+pnpm add @inkdes-email/get-text
 
 # npm
-npm install @inkdes-email/get-html
+npm install @inkdes-email/get-text
 
 # yarn
-yarn add @inkdes-email/get-html
+yarn add @inkdes-email/get-text
 ```
 
-- Signature: `(EmailTemplate: any) => {html: string | null, error: Error | null}`
-- Description: Renders a valid React element to a static HTML string using `renderToStaticMarkup`. Returns `{ html, error: null }` on success or `{ html: null, error }` on failure. Validates input with `React.isValidElement`.
+- Signature: `(EmailTemplate: any) => {text: string | null, error: Error | null}`
+- Description: Renders a valid React element to a static text string using `renderToStaticMarkup`. Returns `{ text, error: null }` on success or `{ text: null, error }` on failure. Validates input with `React.isValidElement`.
 - Example:
 
 ```tsx
-import { getHtml } from "@inkdes-email/get-html";
+import { getText } from "@inkdes-email/get-text";
 import { Html, Head, Body, Text, Button } from "@inkdes-emailcomponents";
 
 function EmailTemplate() {
@@ -53,11 +53,11 @@ function EmailTemplate() {
   </Html>)
 }
 
-const { html, error } = getHtml(<EmailTemplate />);
+const { text, error } = getText(<EmailTemplate />);
 if (error) {
   // handle error
-} else if (html) {
-  // use html
+} else if (text) {
+  // use text
 }
 ```
 

@@ -11,4 +11,5 @@ export { Badge} from "@inkdes-email/badge";
 export { Hr} from "@inkdes-email/hr";
 export { Table} from "@inkdes-email/table";
 export { getHtml } from "@inkdes-email/get-html";
+export { getText } from "@inkdes-email/get-text";
 export { A } from "@inkdes-email/a";
