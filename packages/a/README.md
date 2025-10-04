@@ -57,9 +57,6 @@ export default function EmailTemplate() {
 | noDecoration | boolean | No | false |  |
 | style | React.CSSProperties | No | |  |
 | rel | React.CSSProperties | No |'noopener noreferrer' |  |
-| rel | React.CSSProperties | No |'noopener noreferrer' |  |
-
-
 
 
 ## License
